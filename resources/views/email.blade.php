@@ -1,0 +1,1 @@
+{!! html()->a(route('auth.showResetForm', $token), 'Changer mon mot de passe') !!}
