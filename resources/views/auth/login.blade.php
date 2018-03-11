@@ -35,7 +35,7 @@
                 </div>
                 {!! html()->submit('Se connecter') !!}
                 {!! html()->form()->close() !!}
-                {!! html()->a(route('auth.showLinkRequestForm'))->addChild('Mot de passe oublié') !!}
+                {!! html()->a(route('auth.showLinkRequestForm'),'Mot de passe oublié') !!}
                 <br>
                 <br><br>
                 <br><br>
