@@ -41,11 +41,11 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'db4free.net'),
+            'host' => env('DB_HOST', 'eemi.tech'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'bottle_flow'),
+            'database' => env('DB_DATABASE', 'nroux'),
             'username' => env('DB_USERNAME', 'nroux'),
-            'password' => env('DB_PASSWORD', 'bottleflow23'),
+            'password' => env('DB_PASSWORD', 'g58pmmNd7s'),
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
