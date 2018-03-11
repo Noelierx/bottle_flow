@@ -41,11 +41,11 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'nroux.eemi.tech'),
+            'host' => env('DB_HOST', 'sql11.freemysqlhosting.net'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'nroux'),
-            'username' => env('DB_USERNAME', 'nroux'),
-            'password' => env('DB_PASSWORD', 'g58pmmNd7s'),
+            'database' => env('DB_DATABASE', 'sql11225995'),
+            'username' => env('DB_USERNAME', 'sql11225995'),
+            'password' => env('DB_PASSWORD', 'LGbg9vuHTE'),
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
