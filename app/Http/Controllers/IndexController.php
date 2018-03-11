@@ -10,4 +10,19 @@ class IndexController extends Controller
     {
         return view('index');
     }
+
+    public function mentions()
+    {
+        return view('mentions');
+    }
+
+    public function cgv()
+    {
+        return view('cgv');
+    }
+
+    public function donnees()
+    {
+        return view('donnees');
+    }
 }

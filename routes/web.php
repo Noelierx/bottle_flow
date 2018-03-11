@@ -37,5 +37,11 @@ Route::resource('/orders', OrderController::class);
 Route::resource('/inventory', InventoryController::class);
 Route::resource('/products', ProductController::class);
 Route::resource('/messages', MessageController::class);
+Route::resource('/contact', ContactController::class);
+
 Route::get('/home', 'HomeController@index')->name('home.index');
+
+Route::get('/mentions', 'IndexController@mentions')->name('mentions');
+Route::get('/cgv', 'IndexController@cgv')->name('cgv');
+Route::get('/donnees', 'IndexController@donnees')->name('donnees');
 Route::get('/', 'IndexController@index')->name('index');
