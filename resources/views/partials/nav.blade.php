@@ -24,7 +24,7 @@
                     <li><a href="{{ route('donnees') }}" class="animsition-link">Données personnelles</a></li>
                 </ul>
             </li>
-            <li><a href="#" class="animsition-link">contact</a></li>
+            <li><a href="{{ route('contact.index') }}" class="animsition-link">contact</a></li>
         </ul>
     </nav>
     <!-- mobile navbar -->
