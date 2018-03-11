@@ -1,6 +1,7 @@
+@extends('default')
 
+@section('content')
     @include('partials.error')
-
     {!! html()->form()->action(route('contact.store'))->open() !!}
     <div>
         {!! html()->label('Votre prénom', 'first_name') !!}
@@ -20,3 +21,4 @@
     </div>
     {!! html()->submit('Envoyer') !!}
     {!! html()->form()->close() !!}
+@endsection
