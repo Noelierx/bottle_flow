@@ -1,7 +1,16 @@
 @extends('default')
-
-@section('content')
-    {!! html()->form()->action(route('orders.store'))->open() !!}
+<!-- HERO SECTION  -->
+	<div class="site-hero_2 parallax bg-dark">
+		<div class="page-title">
+			<div class="big-title white-text">Paiment</div>
+			<div class="small-title white-text">Lorem Ipsum</div>
+		</div>
+	</div>
+<!-- POSTS -->
+	<section>
+		<div class="container mt-100 mb-50">
+			<div class="row">
+				{!! html()->form()->action(route('orders.store'))->open() !!}
         @include('partials.error')
         <div>
             {!! html()->label('Code de carte', 'card') !!}
@@ -17,4 +26,7 @@
         </div>
         {!! html()->submit("Payer") !!}
     {!! html()->form()->close() !!}
-@endsection
+            </div>
+        </div>
+        <br/><br/><br/><br/><br/><br/>
+</section>

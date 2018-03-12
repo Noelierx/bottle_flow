@@ -1,15 +1,30 @@
 @extends('default')
+<!-- HERO SECTION  -->
+	<div class="site-hero_2 parallax bg-dark">
+		<div class="page-title">
+			<div class="big-title white-text">Panier</div>
+			<div class="small-title white-text">Lorem Ipsum</div>
+		</div>
+	</div>
 
-@section('content')
-    {!! html()->form('PUT', route('cart.update'))->open() !!}
-        <table>
-            <thead>
+
+@section('page-title', 'Panier')
+
+	<!-- POSTS -->
+	<section>
+		<div class="container mt-100 mb-50">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="single_post">
+						 {!! html()->form('PUT', route('cart.update'))->open() !!}
+        <table class="table">
+            <thead class="thead-dark">
             <tr>
-                <th>Nom du produit</th>
-                <th>Prix du produit</th>
-                <th>Quantité</th>
-                <th>Total</th>
-                <th>Actions</th>
+                <th scope="col">Nom du produit</th>
+                <th scope="col">Prix du produit</th>
+                <th scope="col">Quantité</th>
+                <th scope="col">Total</th>
+                <th scope="col">Actions</th>
             </tr>
             </thead>
             <tbody>
@@ -33,4 +48,9 @@
     {!! html()->form()->close() !!}
     {!! html()->a(route('cart.destroy'), 'Supprimer ce panier')->attribute('data-method', 'DELETE') !!}
     {!! html()->a(route('orders.create'), 'Payer'); !!}
-@endsection
+                        <br/><br/><br/><br/><br/><br/>
+					</div>
+                </div>
+            </div>
+        </div>
+</section>
