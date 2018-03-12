@@ -43,6 +43,16 @@ class User extends Authenticatable
         return $this->belongsToMany(Product::class)->withPivot('quantity');
     }
 
+    public function hasMessagesToRead()
+    {
+        return $this->messagesToRead->count() > 0;
+    }
+
+    public function messagesToRead()
+    {
+        return $this->messages()->where('read', false);
+    }
+
     public function sendPasswordResetNotification($token)
     {
         $this->notify(new ResetPasswordNotification($token));

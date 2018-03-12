@@ -11,7 +11,11 @@
                         <li>{!! html()->a(route('inventory.index'), 'Mon inventaire') !!}</li>
                     </ul>
                 </li>
-                <li>{!! html()->a(route('messages.index'), 'Mes messages') !!}</li>
+                @if(Auth::user()->hasMessagesToRead())
+                    <li>{!! html()->a(route('messages.index'), 'Mes messages (' . Auth::user()->messagesToRead()->count() . ')') !!}</li>
+                @else
+                    <li>{!! html()->a(route('messages.index'), 'Mes messages') !!}</li>
+                @endif
                 <li>{!! html()->a(route('auth.logout'), 'Déconnexion') !!}</li>
             @else
                 <li>{!! html()->a(route('auth.showLoginForm'))->child('Connexion') !!}</li>
