@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Storage;
 use Exception;
 use App\Product;
 use App\ProductType;
@@ -36,7 +37,7 @@ class ProductController extends Controller
             'picture' => 'required|image'
         ]);
 
-        $product = new Product($request->all());
+        $product = new Product($request->input());
         $product->picture = $request->file('picture')->storePublicly('products', 'public');
         $product->type()->associate(ProductType::findOrFail($request->get('type')));
         $product->save();
@@ -44,13 +45,36 @@ class ProductController extends Controller
         return redirect()->route('admin.products.index');
     }
 
-    public function edit()
+    public function edit(Product $product)
     {
-        return view('admin.product.edit');
+        return view('admin.product.edit', [
+            'product' => $product,
+            'types' => ProductType::orderBy('id')->pluck('type', 'id'),
+        ]);
     }
 
     public function update(Request $request, Product $product)
     {
+        $this->validate($request, [
+            'reference' => "required|unique:products,reference,$product->id,id|max:255",
+            'title' => "required|string|unique:products,title,$product->id,id|max:255",
+            'description' => 'required',
+            'price' => 'required|numeric|min:0',
+            'tax_rate' => 'required|numeric|min:0',
+            'type' => 'required|exists:product_types,id',
+            'picture' => 'image'
+        ]);
+
+        $product->update($request->input());
+
+        if($request->hasFile('picture')) {
+            Storage::disk('public')->delete($product->picture);
+            $product->picture = $request->file('picture')->storePublicly('products', 'public');
+        }
+
+        $product->type()->associate(ProductType::findOrFail($request->get('type')));
+        $product->save();
+
         return redirect()->back();
     }
 

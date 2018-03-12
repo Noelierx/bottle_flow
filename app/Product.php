@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Storage;
 use Illuminate\Database\Eloquent\Model;
 use Gloudemans\Shoppingcart\Contracts\Buyable;
 
@@ -23,6 +24,11 @@ class Product extends Model implements Buyable
     public function modifiers()
     {
         return $this->belongsToMany(MessageModifier::class);
+    }
+
+    public function getPictureUrlAttribute()
+    {
+        return Storage::disk('public')->url($this->picture);
     }
 
     /**
