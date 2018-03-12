@@ -10,12 +10,6 @@ class Order extends Model
         'reference'
     ];
 
-    public function __construct(array $attributes = [])
-    {
-        parent::__construct($attributes);
-        $this->reference = str_random(8);
-    }
-
     public function user()
     {
         return $this->belongsTo(User::class);

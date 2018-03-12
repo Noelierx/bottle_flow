@@ -1,7 +1,8 @@
-@extends('default')
+@extends('admin.default')
 
 @section('content')
-    {!! html()->form()->action(route('admin.products.store'))->open() !!}
+    @include('admin.partials.error')
+    {!! html()->form()->action(route('admin.products.store'))->attribute('enctype', 'multipart/form-data')->open() !!}
         <div>
             {!! html()->label('Référence', 'reference') !!}
             {!! html()->text('reference')->required() !!}
@@ -23,8 +24,12 @@
             {!! html()->input('number', 'tax_rate')->required() !!}
         </div>
         <div>
+            {!! html()->label('Type de produit', 'type') !!}
+            {!! html()->select('type', $types)->required() !!}
+        </div>
+        <div>
             {!! html()->label('Image', 'picture') !!}
-            {!! html()->file('picture')->required() !!}
+            {!! html()->file('picture')->attribute('accept', 'image/*')->required() !!}
         </div>
         {!! html()->submit('Créer') !!}
     {!! html()->form()->close() !!}

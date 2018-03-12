@@ -1,4 +1,4 @@
-@extends('default')
+@extends('admin.default')
 
 @section('content')
     {!! html()->a(route('admin.products.create'), 'Ajouter un produit') !!}
@@ -21,7 +21,7 @@
                 <td>{{ $product->tax_rate }}%</td>
                 <td>
                     {!! html()->a(route('admin.products.edit', $product), 'Modifier') !!}
-                    {!! html()->a(route('admin.products.destroy', $product), 'Supprimer')->attribute('data-method', "DELETE") !!}
+                    {!! html()->a(route('admin.products.destroy', $product), 'Supprimer')->attribute('data-method', 'DELETE') !!}
                 </td>
             </tr>
         @endforeach
