@@ -32,9 +32,6 @@
         {!! html()->select('country', ['France' => 'France', 'Belgique' => 'Belgique'])->required() !!}
     </div>
     <div>
-        {!! html()->label('Status')->addChild(html()->checkbox('status')) !!}
-    </div>
-    <div>
         {!! html()->label('Administrateur')->addChild(html()->checkbox('is_admin')) !!}
     </div>
     {!! html()->submit('Ajouter') !!}

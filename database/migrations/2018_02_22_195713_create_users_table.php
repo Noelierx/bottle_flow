@@ -15,7 +15,6 @@ class CreateUsersTable extends Migration {
 			$table->string('first_name');
 			$table->string('last_name');
 			$table->string('country');
-			$table->boolean('status')->default(false);
 			$table->boolean('is_admin')->default(false);
 			$table->rememberToken();
 			$table->timestamps();
