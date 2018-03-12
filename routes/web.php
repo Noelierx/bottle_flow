@@ -26,7 +26,7 @@ Route::group(['namespace' => 'Auth', 'prefix' => '/auth'], function () {
     Route::post('password/reset', 'ResetPasswordController@reset')->name('auth.reset');
 });
 
-Route::group(['namespace' => 'Admin', 'prefix' => '/admin', 'as' => 'admin.'], function () {
+Route::group(['namespace' => 'Admin', 'prefix' => '/admin', 'as' => 'admin.', 'middleware' => 'is_admin'], function () {
     Route::resource('users', UserController::class);
     Route::resource('products', ProductController::class);
 });

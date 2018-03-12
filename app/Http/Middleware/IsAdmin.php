@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
 
-class Authenticate
+class IsAdmin
 {
     /**
      * The Guard implementation.
@@ -34,12 +34,8 @@ class Authenticate
      */
     public function handle($request, Closure $next)
     {
-        if ($this->auth->guest()) {
-            if ($request->ajax()) {
-                abort(404);
-            } else {
-                return redirect()->guest('auth/login');
-            }
+        if ($this->auth->guest() || !$this->auth->user()->is_admin) {
+            abort(404);
         }
 
         return $next($request);
