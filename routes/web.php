@@ -27,6 +27,7 @@ Route::group(['namespace' => 'Auth', 'prefix' => '/auth'], function () {
 });
 
 Route::group(['namespace' => 'Admin', 'prefix' => '/admin', 'as' => 'admin.'], function () {
+    Route::resource('users', UserController::class);
     Route::resource('products', ProductController::class);
 });
 
