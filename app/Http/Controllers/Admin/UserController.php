@@ -16,6 +16,27 @@ class UserController extends Controller
         ]);
     }
 
+    public function create()
+    {
+        return view('admin.user.create');
+    }
+
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'pseudo' => 'required|string|min:6|max:255|unique:users',
+            'email' => 'required|string|email|min:6|max:255|unique:users',
+            'password' => 'required|string|min:6|max:255|confirmed',
+            'first_name' => 'required|string|max:255',
+            'last_name' => 'required|string|max:255',
+            'country' => 'required|string|max:255',
+        ]);
+
+        User::create($request->input());
+
+        return redirect()->route('admin.users.index');
+    }
+
     public function destroy(User $user)
     {
         try {

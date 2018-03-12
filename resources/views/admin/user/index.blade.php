@@ -6,8 +6,10 @@
     <tr>
         <th>Prénom</th>
         <th>Nom</th>
+        <th>Pseudo</th>
         <th>Email</th>
         <th>Status</th>
+        <th>Administrateur</th>
         <th></th>
     </tr>
 @endsection
@@ -17,8 +19,10 @@
         <tr>
             <td>{{ $user->first_name }}</td>
             <td>{{ $user->last_name }}</td>
+            <td>{{ $user->pseudo }}</td>
             <td>{{ $user->email }}</td>
             <td>{{ $user->status }}</td>
+            <td>{{ $user->is_admin }}</td>
             <td>
                 {!! html()->a(route('admin.users.edit', $user), 'Modifier') !!}
                 {!! html()->a(route('admin.users.destroy', $user), 'Supprimer')->attribute('data-method', 'DELETE') !!}
