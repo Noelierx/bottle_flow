@@ -68,7 +68,6 @@ class ProductController extends Controller
         $product->update($request->input());
 
         if($request->hasFile('picture')) {
-            Storage::disk('public')->delete($product->picture);
             $product->picture = $request->file('picture')->storePublicly('products', 'public');
         }
 
