@@ -16,11 +16,9 @@ class MessageController extends Controller
         ]);
     }
 
-    public function create(User $user)
+    public function create()
     {
-        return view('message.create', [
-            'user' => $user,
-        ]);
+        return view('message.create');
     }
 
     public function store(Request $request)
