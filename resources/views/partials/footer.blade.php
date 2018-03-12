@@ -1,5 +1,5 @@
 <footer class="footer pt-50 pb-50">
-    	<svg class="clouds2 clouds-footer" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <svg class="clouds2 clouds-footer" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
                                             <path d="M-5 100 Q 0 20 5 100 Z
                                                      M0 100 Q 5 0 10 100
                                                      M5 100 Q 10 30 15 100
@@ -24,7 +24,7 @@
                                             </path>
          </svg>
         <div class="container">
-                    
+
             <!-- Social Links -->
             <ul class="footer-social-links mb-50">
 				<li><a href="#"><i class="icon ion-social-facebook"></i></a></li>
@@ -34,8 +34,8 @@
 				<li><a href="#"><i class="icon ion-social-pinterest"></i></a></li>
 				<li><a href="#"><i class="icon ion-social-instagram"></i></a></li>
             </ul>
-            <!-- End Social Links -->  
-                    
+            <!-- End Social Links -->
+
             <!-- Footer Text -->
             <div class="footer-text">
             	<!-- Copyright -->
@@ -45,15 +45,15 @@
                 <!-- End Copyright -->
                 <div class="footer-slogan">
                     Slogan de qualité
-                </div>     
+                </div>
             </div>
-            <!-- End Footer Text -->       
+            <!-- End Footer Text -->
         </div>
             <!-- Top Link -->
             <div class="local-scroll">
                 <a href="#top" class="link-to-top"><i class="fa fa-caret-up"></i></a>
             </div>
-            <!-- End Top Link -->  
+            <!-- End Top Link -->
     </footer>
     <!-- End Foter -->
 

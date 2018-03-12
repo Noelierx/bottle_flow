@@ -1,10 +1,34 @@
 @extends('default')
-
-@section('content')
-    {!! html()->form()->action(route('cart.row.store'))->open() !!}
-        <p>{{ $product->title }}</p>
-        <p>{{ $product->description }}</p>
-        {!! html()->hidden('product')->value($product->id) !!}
+<!-- HERO SECTION  -->
+	<div class="site-hero_2 parallax bg-dark">
+		<div class="page-title">
+			<div class="big-title white-text">Conditions générales de ventes</div>
+			<div class="small-title white-text">Lorem Ipsum</div>
+		</div>
+	</div>
+<!-- POSTS -->
+	<section>
+		<div class="container mt-100 mb-50">
+			<div class="row">
+				<div class="col-md-9 col-sm-12">
+					<div class="single_post">
+                         {!! html()->form()->action(route('cart.row.store'))->open() !!}
+                        <div class="post_media">
+							<img class="card-img-top" src="{{ asset('img/' . $product->picture) }}" alt="Card image cap">
+						</div>
+                        <div class="post_title">
+							<h4 class="montserrat-text uppercase">{{ $product->title }}</h4>
+							<span class="post_date">{{ $product->price }} €</span>
+						</div>
+						<p>
+                            {{ $product->description }}
+                        </p>
+                        <p>{!! html()->hidden('product')->value($product->id) !!}
         {!! html()->submit('Ajouter au panier') !!}
-    {!! html()->form()->close() !!}
-@endsection
+    {!! html()->form()->close() !!}</p>
+                        <br/><br/><br/>
+					</div>
+                </div>
+            </div>
+        </div>
+</section>
