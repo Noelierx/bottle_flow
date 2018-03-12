@@ -47,7 +47,9 @@ class OrderController extends Controller
 
         $this->fillUserInventory($user, $order);
 
-        return redirect()->route('home.index');
+        return view('order.success', [
+            'order' => $order
+        ]);
     }
 
     private function createOrder(Request $request, User $user)
