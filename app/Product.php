@@ -16,6 +16,21 @@ class Product extends Model implements Buyable
         'type'
     ];
 
+    public static function boot()
+    {
+        Product::updating(function (Product $product) {
+            if($product->picutre != $product->getOriginal('picture')) {
+                Storage::disk('public')->delete($product->picture);
+            }
+        });
+
+        Product::deleting(function (Product $product) {
+            Storage::disk('public')->delete($product->picture);
+        });
+
+        parent::boot();
+    }
+
     public function type()
     {
         return $this->belongsTo(ProductType::class, 'product_type_id');
