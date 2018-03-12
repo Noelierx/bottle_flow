@@ -26,6 +26,11 @@ Route::group(['namespace' => 'Auth', 'prefix' => '/auth'], function () {
     Route::post('password/reset', 'ResetPasswordController@reset')->name('auth.reset');
 });
 
+Route::group(['namespace' => 'Admin', 'prefix' => '/admin', 'as' => 'admin.'], function () {
+    Route::resource('products', ProductController::class);
+});
+
+
 Route::get('/cart', 'CartController@index')->name('cart.index');
 Route::put('/cart', 'CartController@update')->name('cart.update');
 Route::delete('/cart', 'CartController@destroy')->name('cart.destroy');
