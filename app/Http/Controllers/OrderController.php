@@ -26,11 +26,6 @@ class OrderController extends Controller
         ]);
     }
 
-    public function create()
-    {
-        return view('order.create');
-    }
-
     public function store(Request $request)
     {
         $user = Auth::user();
