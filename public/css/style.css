@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+@font-face {
+	font-family: "Surfing Capital";
+	src: url('../../fonts/Surfing_Capital.ttf');
+}
 
 
 html {
@@ -121,7 +125,6 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: 'Open Sans', sans-serif;
   color: #000000;
   font-weight: 400;
   font-variant-ligatures: common-ligatures;
@@ -136,17 +139,20 @@ h1,
 .h1 {
     font-size: 3.14285714em;
     line-height: 1.31818182em;
+    font-family: 'Surfing Capital';
 }
 h2,
 .h2 {
     font-size: 2.25714286em;
     line-height: 1.36363636em;
     margin-bottom: 0.78787878787879em;
+    font-family: 'Surfing Capital';
 }
 h3,
 .h3 {
     font-size: 1.68571429em;
     line-height: 1.5em;
+    font-family: 'Open Sans', sans-serif;
 }
 h4,
 .h4 {
@@ -154,6 +160,7 @@ h4,
     line-height: 1.68421053em;
     margin-bottom: 1.36842105263158em;
     font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
 }
 h5,
 .h5 {
@@ -161,12 +168,14 @@ h5,
     line-height: 1.25714286em;
     margin-bottom: 1.36842105263158em;
     font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
 }
 h6,
 .h6 {
     font-size: 0.85714286em;
     line-height: 2.16666667em;
     font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
 }
 iframe{
 	border: 0;
@@ -285,6 +294,9 @@ blockquote.bq{
 }
 .pt-50{
 	padding-top: 50px;
+}
+.pt-30{
+	padding-top: 30px;
 }
 .pt-100{
 	padding-top: 100px;
@@ -758,6 +770,7 @@ a.link-to-top{
 .site-hero .big-title{
 	font-size: 70px;
 	color:#000000;
+    font-family: 'Surfing Capital';
 	font-weight: 700;
 	letter-spacing: 10px;
 	margin-bottom: 30px;
