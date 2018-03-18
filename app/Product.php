@@ -20,7 +20,7 @@ class Product extends Model implements Buyable
     {
         Product::updating(function (Product $product) {
             if($product->picutre != $product->getOriginal('picture')) {
-                Storage::disk('public')->delete($product->picture);
+                Storage::disk('public')->delete($product->getOriginal('picture'));
             }
         });
 
