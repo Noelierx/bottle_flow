@@ -1,22 +1,16 @@
 @extends('default')
-<!-- HERO SECTION  -->
-	<div class="site-hero_2 parallax bg-dark">
-		<div class="page-title">
-			<div class="big-title white-text">Panier</div>
-			<div class="small-title white-text">Lorem Ipsum</div>
-		</div>
-	</div>
 
-@include('partials.error')
 @section('page-title', 'Panier')
+@section('hero-title', 'Contact')
+@section('hero-subtitle', 'Un problème? Contactez nous!')
 
-	<!-- POSTS -->
-	<section>
-		<div class="container mt-100 mb-50">
-			<div class="row">
-				<div class="col-md-12 col-sm-12">
-					<div class="single_post">
-						 {!! html()->form()->action(route('contact.store'))->open() !!}
+@section('content')
+    <section>
+        <div class="container mt-100 mb-50">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="single_post">
+                        {!! html()->form()->action(route('contact.store'))->open() !!}
                         <div>
                             {!! html()->label('Votre prénom', 'first_name') !!}
                             {!! html()->text('first_name')->required() !!}
@@ -36,9 +30,9 @@
                         {!! html()->submit('Envoyer') !!}
                         {!! html()->form()->close() !!}
                         <br/><br/><br/><br/><br/><br/>
-					</div>
+                    </div>
                 </div>
             </div>
         </div>
-</section>
-    
+    </section>
+@endsection

@@ -1,14 +1,10 @@
 @extends('default')
 
 @section('page-title', 'Panier')
+@section('hero-title', 'Panier')
+@section('hero-subtitle', 'Votre panier')
 
 @section('content')
-    <div class="site-hero_2 parallax bg-dark">
-        <div class="page-title">
-            <div class="big-title white-text">Panier</div>
-            <div class="small-title white-text">Lorem Ipsum</div>
-        </div>
-    </div>
     <section>
         <div class="container mt-100 mb-50">
             <div class="row">
