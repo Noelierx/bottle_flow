@@ -16,6 +16,10 @@ class CreateUsersTable extends Migration {
 			$table->string('last_name');
 			$table->string('country');
 			$table->boolean('is_admin')->default(false);
+            $table->string('stripe_id')->nullable();
+            $table->string('card_brand')->nullable();
+            $table->string('card_last_four')->nullable();
+            $table->timestamp('trial_ends_at')->nullable();
 			$table->rememberToken();
 			$table->timestamps();
 		});

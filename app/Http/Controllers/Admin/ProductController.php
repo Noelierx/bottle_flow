@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Storage;
 use Exception;
 use App\Product;
 use App\ProductType;

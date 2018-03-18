@@ -19,7 +19,7 @@ class UsersTableSeeder extends Seeder
             'first_name' => 'Noellie',
             'last_name' => 'Compotedepomme',
             'country' => 'France',
-            'status' => true
+            'is_admin' => true
         ]);
 
         User::create([
@@ -29,7 +29,7 @@ class UsersTableSeeder extends Seeder
             'first_name' => 'Pierre',
             'last_name' => 'Dorifuto',
             'country' => 'France',
-            'status' => true
+            'is_admin' => true
         ]);
 
         User::create([
@@ -39,7 +39,7 @@ class UsersTableSeeder extends Seeder
             'first_name' => 'Flavien',
             'last_name' => 'EfEfKatorz',
             'country' => 'France',
-            'status' => true
+            'is_admin' => true
         ]);
 
         User::create([
@@ -49,7 +49,7 @@ class UsersTableSeeder extends Seeder
             'first_name' => 'Aimee',
             'last_name' => 'Anonymous',
             'country' => 'France',
-            'status' => true
+            'is_admin' => true
         ]);
 
         User::create([
@@ -59,7 +59,7 @@ class UsersTableSeeder extends Seeder
             'first_name' => 'BenYamin',
             'last_name' => 'GroVentre',
             'country' => 'France',
-            'status' => true
+            'is_admin' => true
         ]);
     }
 }

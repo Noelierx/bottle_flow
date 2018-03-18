@@ -33,12 +33,6 @@ class OrderController extends Controller
 
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'card' => 'required|digits:16',
-            'secret' => 'required|digits:3',
-            'date' => ['required', 'date', new Future()]
-        ]);
-
         $user = Auth::user();
 
         $order = $this->createOrder($request, $user);
@@ -54,7 +48,8 @@ class OrderController extends Controller
 
     private function createOrder(Request $request, User $user)
     {
-        $order = new Order($request->all());
+        $order = new Order();
+        $order->reference = str_random(8);
         $order->user()->associate($user);
         $order->save();
 

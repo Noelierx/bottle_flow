@@ -1,4 +1,4 @@
-<div>
+<div class="errors">
     @if ($errors->any())
         <div>
             <ul>
