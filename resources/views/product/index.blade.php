@@ -1,8 +1,8 @@
 @extends('default')
 
 @section('page-title', 'Produits')
-@section('hero-title', 'Bienvenue')
-@section('hero-subtitle', 'Lorem Ipsum')
+@section('hero-title', 'Boutique')
+@section('hero-subtitle', 'Découvrez tous nos produits')
 
 @section('content')
     <section>

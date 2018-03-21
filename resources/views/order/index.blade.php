@@ -2,7 +2,7 @@
 
 @section('page-title', 'Commandes')
 @section('hero-title', 'Historique des commandes')
-@section('hero-subtitle', 'Lorem Ipsum')
+@section('hero-subtitle', 'Visualiser toutes vos commandes')
 
 @section('content')
     <section>

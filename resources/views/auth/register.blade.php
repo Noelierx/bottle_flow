@@ -12,7 +12,9 @@
             </div>
             <div class="row  text-center ">
                 <div class="col-md-12">
-                    <h4 class="playfair-text mt-30">Un texte random pour faire joli</h4>
+                    <h4 class="playfair-text mt-30">En créant votre compte, vous aurez la possibilité d'envoyer des messages à des gens venant des quatre coins du globe ! Inscrivez-vous dès maintenant pour bénéficier de nos fonctionnalités et bien plus encore.</h4>
+                </div>
+                <div class="sign-form">
                     {!! html()->form()->action(route('auth.register'))->open() !!}
                     <div>
                         {!! html()->label('Votre pseudonyme', 'pseudo') !!}

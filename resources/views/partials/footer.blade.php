@@ -28,12 +28,9 @@
 
         <!-- Social Links -->
         <ul class="footer-social-links mb-50">
-            <li><a href="#"><i class="icon ion-social-facebook"></i></a></li>
-            <li><a href="#"><i class="icon ion-social-twitter"></i></a></li>
-            <li><a href="#"><i class="icon ion-social-youtube"></i></a></li>
-            <li><a href="#"><i class="icon ion-social-linkedin"></i></a></li>
-            <li><a href="#"><i class="icon ion-social-pinterest"></i></a></li>
-            <li><a href="#"><i class="icon ion-social-instagram"></i></a></li>
+            <li><a href="https://www.facebook.com/BottleFlowProject"><i class="icon ion-social-facebook"></i></a></li>
+            <li><a href="https://twitter.com/BottleFlow_P"><i class="icon ion-social-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/bottleflowproject/"><i class="icon ion-social-instagram"></i></a></li>
         </ul>
         <!-- End Social Links -->
 
@@ -45,7 +42,7 @@
             </div>
             <!-- End Copyright -->
             <div class="footer-slogan">
-                Slogan de qualité
+                Créer des liens uniques avec des personnes du monde entier.
             </div>
         </div>
         <!-- End Footer Text -->

@@ -5,14 +5,15 @@
 @section('hero-subtitle', 'Changer mon mot de passe')
 
 @section('content')
-    <section>
+    <section class="sign-form">
         <div class="container">
             <div class="section-padding">
                 <div class="top-line"></div>
             </div>
             <div class="row text-center ">
                 <div class="col-md-12">
-                    <h4 class="playfair-text mt-30">Un texte random pour faire joli</h4>
+                    <h4 class="playfair-text mt-30">Renseignez votre adresse mail ainsi que votre nouveau mot de passe.</h4>
+                    
                     {!! html()->form()->action(route('auth.reset'))->open() !!}
                     {!! html()->hidden('token', $token)->required() !!}
                     <div>

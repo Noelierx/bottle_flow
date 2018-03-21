@@ -13,6 +13,8 @@
             <div class="row  text-center ">
                 <div class="col-md-12">
                     <h4 class="playfair-text mt-30">Envoyer un message</h4>
+                </div>
+                <div class="sign-form">
                     <div>
                         {!! html()->form()->action(route('messages.store'))->open() !!}
                         <div>

@@ -6,10 +6,10 @@
 
 @section('content')
     <section>
-        <div class="container mt-100 mb-50">
+        <div class="container mt-100 mb-50 pb-50">
             <div class="row">
                 <div class="col-md-12 col-sm-12">
-                    <div class="single_post">
+                    <div class="sign-form">
                         {!! html()->form()->action(route('contact.store'))->open() !!}
                         <div>
                             {!! html()->label('Votre prénom', 'first_name') !!}
@@ -29,10 +29,10 @@
                         </div>
                         {!! html()->submit('Envoyer') !!}
                         {!! html()->form()->close() !!}
-                        <br/><br/><br/><br/><br/><br/>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 @endsection
+    
